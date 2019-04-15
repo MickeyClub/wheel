@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MickeyClub/wheel/issues"
   },
-  "homepage": "https://github.com/MickeyClub/wheel#readme"
+  "homepage": "https://github.com/MickeyClub/wheel#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
