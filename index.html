@@ -1,25 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-Hans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轱辘</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html {
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+    #app {
+      margin: 20px;
+    }
+    body {
+      font-size: var(--font-size);
+    }
+  </style>
+  <style>
+     .icon {
+      width: 1em;
+      height: 1em;
+    }
+  </style>
 </head>
 <body>
-    <div id="app">
-        <g-button></g-button>
-    </div>
-    
-    <script src="https://lib.baomitu.com/vue/2.6.10/vue.common.dev.js"></script>
-    <script src="./button.js"></script>
-    <script>
-        var vm = new Vue({
-            el: '#app',
-            data: {
-                message: 'h1'
-            }
-        })
-    </script>
+<div id="app">
+  <g-button icon="shezhi" icon-position="right">按钮</g-button>
+  <g-button icon="xiazai" icon-position="left">按钮</g-button>
+</div>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1146227_sjfjoex199.js"></script>
 </body>
 </html>
