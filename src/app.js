@@ -7,8 +7,7 @@ Vue.component('g-icon', Icon)
 
 new Vue({
   el: '#app',
-  // components: {
-  //   GButton,
-  //   GIcon
-  // }
+  data: {
+    loading1: false
+  }
 })
