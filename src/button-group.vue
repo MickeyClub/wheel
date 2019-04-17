@@ -17,9 +17,7 @@ export default {
   border-radius: none;
   > .g-button {
     border-radius: 0;
-    &:not(:first-child){
-        border-left: none;
-    }
+    margin-left: -1px;
     &:first-child {
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius);
@@ -27,6 +25,10 @@ export default {
     &:last-child {
       border-top-right-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
+    }
+    &:hover{
+        position: relative;
+        z-index:    1   ;
     }
   }
 }
