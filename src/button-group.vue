@@ -9,7 +9,7 @@ export default {
     mounted(){
         for(let localName of this.$el.children){
             if(localName.localName !== 'button'){
-                console.warn('g-button-group组件不建议使用div包裹g-button')
+                console.warn(`g-button-group组件不建议使用${localName.localName}包裹g-button`)
             }
         }
     }
