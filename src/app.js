@@ -10,7 +10,7 @@ Vue.component('g-button-group', ButtonGroup)
 new Vue({
   el: '#app',
   data: {
-    loading1: false,
+    loading: false,
     loading2: true,
     loading3: false,
   }
@@ -22,17 +22,17 @@ chai.use(spies)
 
 const expect = chai.expect
 // 单元测试
-{
+{ // 测试按钮含有icon
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
-      icon: 'settings'
+      icon: 'shezhi'
     }
   })
   vm.$mount()
   let useElement = vm.$el.querySelector('use')
   let href = useElement.getAttribute('xlink:href')
-  expect(href).to.eq('#i-settings')
+  expect(href).to.eq('#icon-shezhi')
   vm.$el.remove()
   vm.$destroy()
 }
@@ -40,14 +40,14 @@ const expect = chai.expect
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
-      icon: 'settings',
+      icon: 'shezhi',
       loading: true
     }
   })
   vm.$mount()
   let useElement = vm.$el.querySelector('use')
   let href = useElement.getAttribute('xlink:href')
-  expect(href).to.eq('#i-loading')
+  expect(href).to.eq('#icon-shezhi')
   vm.$el.remove()
   vm.$destroy()
 }
@@ -57,7 +57,7 @@ const expect = chai.expect
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
-      icon: 'settings'
+      icon: 'shezhi'
     }
   })
   vm.$mount(div)
@@ -73,7 +73,7 @@ const expect = chai.expect
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
-      icon: 'settings',
+      icon: 'shezhi',
       iconPosition: 'right'
     }
   })
@@ -89,7 +89,7 @@ const expect = chai.expect
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
-      icon: 'settings',
+      icon: 'shezhi',
     }
   })
   vm.$mount()
