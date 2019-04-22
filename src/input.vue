@@ -1,13 +1,12 @@
 <template>
   <div class="g-input" :class="{error}">
-    <input
-      type="text"
-      :value="value"
-      :disabled="disabled"
-      :readonly="readonly"
+    <input type="text" 
+    :value="value"
+    :disabled="disabled"
+    :readonly="readonly"
     >
-    <template v-if="error" >
-      <Icon class="icon-error" name="error"></Icon>
+    <template v-if="error">
+      <icon name="error" class="icon-error"></icon>
       <span class="errorMessage">{{error}}</span>
     </template>
   </div>
@@ -33,7 +32,7 @@ export default {
       default: false
     },
     error: {
-      type: String
+      type: String,
     }
   }
 }

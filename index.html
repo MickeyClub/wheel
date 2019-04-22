@@ -48,9 +48,13 @@
         <g-input value="aaa" readonly></g-input>
         <g-input value="error" error="名字不能少于两个"></g-input>
     </div>
+    <div class="box">
+      <g-input v-model="message"></g-input>
+    </div>
 
-
-
+    <input type="text" v-model="message">
+    <input type="text" :value="message" @input="message = $event.target.value">
+    {{message}}
 
 
 
