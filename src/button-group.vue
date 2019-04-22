@@ -6,13 +6,14 @@
 
 <script>
 export default {
-    mounted(){
-        for(let localName of this.$el.children){
-            if(localName.localName !== 'button'){
-                console.warn(`g-button-group组件不建议使用${localName.localName}包裹g-button`)
-            }
-        }
+  name: "GuluButtonGroup",
+  mounted() {
+    for (let localName of this.$el.children) {
+      if (localName.localName !== 'button') {
+        console.warn(`g-button-group组件不建议使用${localName.localName}包裹g-button`)
+      }
     }
+  }
 }
 </script>
 
@@ -23,8 +24,8 @@ export default {
   border-radius: none;
   > .g-button {
     border-radius: 0;
-    &:not(:first-child){
-        margin-left: -1px;
+    &:not(:first-child) {
+      margin-left: -1px;
     }
     &:first-child {
       border-top-left-radius: var(--border-radius);
@@ -34,9 +35,9 @@ export default {
       border-top-right-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
     }
-    &:hover{
-        position: relative;
-        z-index:    1   ;
+    &:hover {
+      position: relative;
+      z-index: 1;
     }
   }
 }

@@ -39,9 +39,39 @@
     }
   </style>
 </head>
-
+<style>
+  .row{
+    display: flex;
+  }
+  .col{
+    height: 50px;
+    background-color: gray;
+    border: 1px solid red;
+    width: 50%;
+  }
+</style>
 <body>
   <div id="app">
+    <g-row>
+      <g-col :span="10"></g-col>
+      <g-col span="14"></g-col>
+    </g-row>
+    <g-row>
+      <g-col></g-col>
+      <g-col></g-col>
+      <g-col></g-col>
+    </g-row>
+    <g-row>
+      <g-col></g-col>
+      <g-col></g-col>
+      <g-col></g-col>
+      <g-col></g-col>
+    </g-row>
+    <g-row>
+      <g-col span="1"></g-col>
+      <g-col span="23"></g-col>
+    </g-row>
+
     <div class="box">
       <g-input value="输入框"></g-input>
         <g-input value="输入框" disabled></g-input>

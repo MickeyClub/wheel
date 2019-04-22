@@ -11,6 +11,7 @@
   import Vue from 'vue'
   import Icon from './icon.vue'
   export default {
+    name: "GuluButton",
     components: {
       'g-icon': Icon
     },
