@@ -37,37 +37,37 @@
     .box {
       margin: 20px;
     }
+    .demo{
+      background-color: #ccc;
+      height: 100px;
+      border: 1px solid red;
+    }
   </style>
 </head>
 
 <body>
   <div id="app">
-    <div>
-      <g-row gutter="20">
-        <g-col 
-        :span="24" 
-        :ipad="{span: 12}"
-        :narrow-pc="{span: 10}"
-        :pc="{span: 8}"
-        :wide-pc="{span: 7}">
-        1</g-col>
-
-        <g-col 
-        :span="24" 
-        :ipad="{span: 12}"
-        :narrow-pc="{span: 14}"
-        :pc="{span: 16}"
-        :wide-pc="{span: 17}"
-        >2</g-col>
-
-
-
-      </g-row>
-      <g-row align="center">
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-      </g-row>
-    </div>
+    <g-row>
+      <g-col :span="24" :ipad="{span: 12}" :wide-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col :span="24" :ipad="{span: 12}" :wide-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col :span="24" :ipad="{span: 12}" :wide-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col :span="24" :ipad="{span: 12}" :wide-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col :span="24" :ipad="{span: 12}" :wide-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col :span="24" :ipad="{span: 12}" :wide-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+    </g-row>
+    
 
 
 
