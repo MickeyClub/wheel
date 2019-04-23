@@ -1,16 +1,15 @@
 <template>
-  <div class="g-col" :class="[span && `col-${span}`, offset && `offset-${offset}`]"
-  :style="{paddingLeft: gutter/2+'px', paddingRight: gutter/2+'px'}"
+  <div
+    class="g-col"
+    :class="colClass"
+    :style="colStyle"
   >
-    <div style="border: 1px solid green; height: 100px">
-
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
 <script>
-export default {    
+export default {
   name: "GuluCol",
   props: {
     span: {
@@ -25,27 +24,40 @@ export default {
       gutter: 0
     }
   },
-  mounted() {
-    console.log(this.gutter)
+  computed: {
+    colClass() {
+      let { span, offset } = this
+      return [
+        span && `col-${span}`,
+        offset && `offset-${offset}`
+      ]
+    },
+    colStyle() {
+      let { gutter } = this
+      return {
+        paddingLeft: gutter / 2 + 'px',
+        paddingRight: gutter / 2 + 'px'
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .g-col {
-    width: 50%;
-    $class-prefix: col-;
-    @for $n from 1 through 24 {
-      &.#{$class-prefix}#{$n} {
-        width: ($n / 24) * 100%;
-      }
-    }
-
-    $class-prefix: offset-;
-    @for $n from 1 through 24 {
-      &.#{$class-prefix}#{$n} {
-        margin-left: ($n / 24) * 100%;
-      }
+.g-col {
+  width: 50%;
+  $class-prefix: col-;
+  @for $n from 1 through 24 {
+    &.#{$class-prefix}#{$n} {
+      width: ($n / 24) * 100%;
     }
   }
+
+  $class-prefix: offset-;
+  @for $n from 1 through 24 {
+    &.#{$class-prefix}#{$n} {
+      margin-left: ($n / 24) * 100%;
+    }
+  }
+}
 </style>
