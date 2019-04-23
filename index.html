@@ -34,49 +34,35 @@
     }
   </style>
   <style>
-    .box{
+    .box {
       margin: 20px;
     }
   </style>
 </head>
-<style>
-  .row{
-    display: flex;
-  }
-  .col{
-    height: 50px;
-    background-color: gray;
-    border: 1px solid red;
-    width: 50%;
-  }
-</style>
+
 <body>
   <div id="app">
-    <g-row>
-      <g-col :span="10"></g-col>
-      <g-col span="14"></g-col>
-    </g-row>
-    <g-row>
-      <g-col></g-col>
-      <g-col></g-col>
-      <g-col></g-col>
-    </g-row>
-    <g-row>
-      <g-col></g-col>
-      <g-col></g-col>
-      <g-col></g-col>
-      <g-col></g-col>
-    </g-row>
-    <g-row>
-      <g-col span="1"></g-col>
-      <g-col span="23"></g-col>
-    </g-row>
+    <div style="border: 1px solid black">
+        <g-row gutter="20">
+            <g-col ></g-col>
+            <g-col ></g-col>
+          </g-row>
+          <g-row gutter="20">
+            <g-col ></g-col>
+            <g-col ></g-col>
+            <g-col ></g-col>
+          </g-row>
+          <g-row gutter="10">
+            <g-col span="1"></g-col>
+            <g-col span="23"></g-col>
+          </g-row>
+    </div>
 
     <div class="box">
       <g-input value="输入框"></g-input>
-        <g-input value="输入框" disabled></g-input>
-        <g-input value="aaa" readonly></g-input>
-        <g-input value="error" error="名字不能少于两个"></g-input>
+      <g-input value="输入框" disabled></g-input>
+      <g-input value="aaa" readonly></g-input>
+      <g-input value="error" error="名字不能少于两个"></g-input>
     </div>
     <div class="box">
       <g-input v-model="message"></g-input>
@@ -105,21 +91,21 @@
 
 
     <div class="box">
-        <g-button icon="xiazai" icon-position="left">按钮</g-button>
-        <g-button icon-position="right">按钮</g-button>
-        <g-button icon="shezhi" icon-position="right">按钮</g-button>
-        <g-button  icon-position="right" :loading="loading" @click="loading = !loading">按钮</g-button>
-        <g-button  icon-position="right" :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
-        <g-button  icon-position="right" :loading="loading3" @click="loading3 = !loading3">按钮</g-button>
-        <g-icon name="xiazai"></g-icon>
-        <g-icon name="loading"></g-icon>
+      <g-button icon="xiazai" icon-position="left">按钮</g-button>
+      <g-button icon-position="right">按钮</g-button>
+      <g-button icon="shezhi" icon-position="right">按钮</g-button>
+      <g-button icon-position="right" :loading="loading" @click="loading = !loading">按钮</g-button>
+      <g-button icon-position="right" :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
+      <g-button icon-position="right" :loading="loading3" @click="loading3 = !loading3">按钮</g-button>
+      <g-icon name="xiazai"></g-icon>
+      <g-icon name="loading"></g-icon>
     </div>
     <div class="box">
-        <g-button-group>
-            <g-button icon="houtui">上一页</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="qianjin" icon-position="right">下一页</g-button>
-        </g-button-group>
+      <g-button-group>
+        <g-button icon="houtui">上一页</g-button>
+        <g-button>更多</g-button>
+        <g-button icon="qianjin" icon-position="right">下一页</g-button>
+      </g-button-group>
     </div>
   </div>
   <script src="./src/app.js"></script>

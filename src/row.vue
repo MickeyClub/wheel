@@ -1,17 +1,32 @@
 <template>
-    <div class="g-row">
-        <slot></slot>
-    </div>
+  <div
+    class="g-row"
+    :style="{marginLeft: -gutter/2+'px', marginRight: -gutter/2+'px'}"
+  >
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "GuluRow"
+  name: "GuluRow",
+  props: {
+    gutter: {
+      type: [Number, String]
+    }
+  },
+  mounted(){
+    console.log(this.$children)
+    console.log(this.gutter)
+    this.$children.forEach(vm =>{
+      vm.gutter = this.gutter
+    })
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.g-row{
-    display: flex;
+.g-row {
+  display: flex;
 }
 </style>
