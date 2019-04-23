@@ -43,20 +43,37 @@
 <body>
   <div id="app">
     <div>
-        <g-row gutter="20">
-            <g-col >1</g-col>
-            <g-col >2</g-col>
-          </g-row>
-          <g-row gutter="20">
-            <g-col >1</g-col>
-            <g-col >2</g-col>
-            <g-col >3</g-col>
-          </g-row>
-          <g-row gutter="10">
-            <g-col span="1">1</g-col>
-            <g-col span="23">2</g-col>
-          </g-row>
+      <g-row gutter="20">
+        <g-col 
+        :span="8" 
+        :phone="{span: 24}"
+        :ipad="{span: 12}"
+        :narrow-pc="{span: 10}"
+        :pc="{span: 8}"
+        :wide-pc="{span: 7}">
+        1</g-col>
+
+        <g-col 
+        :span="16" 
+        :phone="{span: 24}"
+        :ipad="{span: 12}"
+        :narrow-pc="{span: 14}"
+        :pc="{span: 16}"
+        :wide-pc="{span: 17}"
+        >2</g-col>
+
+
+
+      </g-row>
+      <g-row align="center">
+        <g-col>1</g-col>
+        <g-col>2</g-col>
+      </g-row>
     </div>
+
+
+
+
 
     <div class="box">
       <g-input value="输入框"></g-input>
