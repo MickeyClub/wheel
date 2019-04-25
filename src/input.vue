@@ -1,12 +1,23 @@
 <template>
-  <div class="g-input" :class="{error}">
-    <input type="text" 
-    :value="value"
-    :disabled="disabled"
-    :readonly="readonly"
+  <div
+    class="g-input"
+    :class="{error}"
+  >
+    <input
+      type="text"
+      :value="value"
+      :disabled="disabled"
+      :readonly="readonly"
+      @change="$emit('change', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus', $event.target.value)"
+      @blur="$emit('blur', $event.target.value)"
     >
     <template v-if="error">
-      <icon name="error" class="icon-error"></icon>
+      <icon
+        name="error"
+        class="icon-error"
+      ></icon>
       <span class="errorMessage">{{error}}</span>
     </template>
   </div>
@@ -34,6 +45,9 @@ export default {
     error: {
       type: String,
     }
+  },
+  mounted(){
+    console.log(this.change);
   }
 }
 </script>

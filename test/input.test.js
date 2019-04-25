@@ -73,7 +73,6 @@ describe('Input', () => {
           vm.$on(eventName, callback)
           //触发input的change 事件
           let event = new Event(eventName);
-          // 测试v-model 因为v-model出发的是e.target.valu的值,浏览器不支持直接修改,需要用到defineProperty属性
           Object.defineProperty(
             event, 'target', {
               value: {value: 'hi'}, enumerable: true
@@ -81,9 +80,8 @@ describe('Input', () => {
           )
           let inputElement = vm.$el.querySelector('input')
           inputElement.dispatchEvent(event)
-          expect(callback).to.have.been.calledWith(event)
-          expect(callback).to.have.been.calledWith('h1')
+          expect(callback).to.have.been.calledWith('hi')
         })
     })
   })
-}) 
+})

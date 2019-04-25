@@ -54,7 +54,7 @@ export default {
     justify-content: center;
   }
   &.align-right{
-    justify-content: right;
+    justify-content: flex-end;
   }
 }
 </style>
