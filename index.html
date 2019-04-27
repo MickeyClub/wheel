@@ -25,94 +25,54 @@
       --border-color-hover: #666;
     }
 
-    #app {
-      margin: 20px;
-    }
-
     body {
       font-size: var(--font-size);
     }
   </style>
   <style>
-    .box {
-      margin: 20px;
+    * {
+      padding: 0;
+      margin: 0;
     }
-    .demo{
+
+    .demo {
       background-color: #ccc;
       height: 100px;
       border: 1px solid red;
+    }
+
+    .header {
+      height: 100px;
+      background-color: red;
+    }
+
+    .content {
+      background-color: yellow;
+    }
+
+    .footer {
+      height: 100px;
+      background-color: green;
+    }
+
+    .sider {
+      background-color: pink;
     }
   </style>
 </head>
 
 <body>
   <div id="app">
-    <g-row>
-      <g-col :span="22" offset="2" :ipad="{span: 12, offset: 12}" >
-        <div class="demo"></div>
-      </g-col>
-      <g-col :span="22" offset="2" :ipad="{span: 8, offset: 16}" >
-        <div class="demo"></div>
-      </g-col>
-    </g-row>
-    
-
-
-
-
-
-    <div class="box">
-      <g-input value="输入框"></g-input>
-      <g-input value="输入框" disabled></g-input>
-      <g-input value="aaa" readonly></g-input>
-      <g-input value="error" error="名字不能少于两个"></g-input>
-    </div>
-    <div class="box">
-      <g-input v-model="message"></g-input>
-    </div>
-
-    <input type="text" v-model="message">
-    <input type="text" :value="message" @input="message = $event.target.value">
-    {{message}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="box">
-      <g-button icon="xiazai" icon-position="left">按钮</g-button>
-      <g-button icon-position="right">按钮</g-button>
-      <g-button icon="shezhi" icon-position="right">按钮</g-button>
-      <g-button icon-position="right" :loading="loading" @click="loading = !loading">按钮</g-button>
-      <g-button icon-position="right" :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
-      <g-button icon-position="right" :loading="loading3" @click="loading3 = !loading3">按钮</g-button>
-      <g-icon name="xiazai"></g-icon>
-      <g-icon name="loading"></g-icon>
-    </div>
-    <div class="box">
-      <g-button-group>
-        <g-button icon="houtui">上一页</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="qianjin" icon-position="right">下一页</g-button>
-      </g-button-group>
-    </div>
+    <g-layout style="height: 100vh;">
+      <g-header class="header">header</g-header>
+      <g-layout style="height: 100vh;">
+        <g-sider class="sider">sider</g-sider>
+        <g-content class="content">content</g-content>
+      </g-layout>
+      <g-footer class="footer">footer</g-footer>
+    </g-layout>
   </div>
+  
   <script src="./src/app.js"></script>
-  <!-- <script src="//at.alicdn.com/t/font_1146227_8d18arjmbvg.js"></script> -->
 </body>
-
 </html>
