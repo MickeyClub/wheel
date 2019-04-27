@@ -29,49 +29,11 @@
       font-size: var(--font-size);
     }
   </style>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-    }
-
-    .demo {
-      background-color: #ccc;
-      height: 100px;
-      border: 1px solid red;
-    }
-
-    .header {
-      height: 100px;
-      background-color: red;
-    }
-
-    .content {
-      background-color: yellow;
-    }
-
-    .footer {
-      height: 100px;
-      background-color: green;
-    }
-
-    .sider {
-      background-color: pink;
-      width: 300px;
-    }
-  </style>
 </head>
 
 <body>
   <div id="app">
-    <g-layout style="height: 100vh;">
-      <g-sider class="sider">sider</g-sider>
-      <g-layout style="height: 100vh;">
-        <g-header class="header">header</g-header>
-        <g-content class="content">content</g-content>
-        <g-footer class="footer">footer</g-footer>
-      </g-layout>
-    </g-layout>
+    <button @click="showToast">点我</button>
   </div>
 
   <script src="./src/app.js"></script>
