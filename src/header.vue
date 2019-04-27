@@ -10,5 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.g-header {
+}
 </style>
