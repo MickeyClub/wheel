@@ -59,8 +59,9 @@ new Vue({
             toast.log()
           }
         },
-        autoDelay: true,
-        closeDelay: 2
+        autoDelay: 2,
+        autoClose: false,
+        position: 'bottom'
       })
     }
   }
