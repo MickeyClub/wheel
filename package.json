@@ -24,10 +24,10 @@
   "homepage": "https://github.com/MickeyClub/wheel#readme",
   "dependencies": {
     "vue": "^2.5.16",
-    "vue-hot-reload-api": "^2.3.0"
+    "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {
-    "@vue/component-compiler-utils": "^2.0.0",
+    "@vue/component-compiler-utils": "^2.6.0",
     "chai": "^4.2.0",
     "chai-spies": "^1.0.0",
     "karma": "^4.1.0",
@@ -39,9 +39,10 @@
     "mocha": "^6.1.4",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.9.2",
+    "sass": "^1.22.9",
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.6.10"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"

@@ -36,13 +36,32 @@ new Vue({
     message: 'h1'
   },
   created() {
+    this.$toast('<strong>十一点半就撤</strong><strong>十一点半就撤</strong><strong>十一点半就撤</strong><strong>十一点半就撤</strong><strong>十一点半就撤</strong>', {
+      closeButton: {
+        text: '关闭',
+        callback(toast) {
+          toast.log()
+          console.log('我点了 打印知道了')
+        }
+      },
+      enableHtml: true
+    })
   },
   methods: {
     inputChange(e) {
       console.log(e.target.value)
     },
     showToast() {
-      this.$toast('十一点半就撤')
+      this.$toast('今天睡意不错', {
+        closeButton: {
+          text: '早点睡',
+          callback(toast) {
+            toast.log()
+          }
+        },
+        autoDelay: true,
+        closeDelay: 2
+      })
     }
   }
 })
