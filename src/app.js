@@ -51,7 +51,10 @@ new Vue({
     inputChange(e) {
       console.log(e.target.value)
     },
-    showToast() {
+    showToast(local) {
+      if (!local) {
+        local = 'middle'
+      }
       this.$toast(`今天睡意不错${parseInt(Math.random() * 100)}`, {
         closeButton: {
           text: '早点睡',
@@ -61,7 +64,7 @@ new Vue({
         },
         autoDelay: 2,
         autoClose: true,
-        position: 'middle'
+        position: local
       })
     }
   }
