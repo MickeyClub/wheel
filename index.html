@@ -33,11 +33,46 @@
 
 <body>
   <div id="app">
-    <button @click="showToast('top')">top</button>
+    <!-- <button @click="showToast('top')">top</button>
     <button @click="showToast('middle')">middle</button>
     <button @click="showToast('bottom')">button</button>
-    <button @click="showToast()">button</button>
+    <button @click="showToast()">button</button> -->
+
+    <div>
+      <!-- <g-tabs selected="selectedTab" @update:selected="selectedTab = $event"> -->
+      <g-tabs :selected.sync="selectedTab">
+        <g-tabs-head name="two">
+          <template slot="actions">
+            button
+          </template>
+          <g-tabs-item name="one">
+            <g-icon name="shezhi"></g-icon>
+            美女
+          </g-tabs-item>
+          <g-tabs-item name="two" disabled>
+            野兽
+          </g-tabs-item>
+          <g-tabs-item name="there">
+            青春
+          </g-tabs-item>
+        </g-tabs-head>
+        <g-tabs-body>
+          <g-tabs-pane name="one">
+            美女咨询
+          </g-tabs-pane>
+          <g-tabs-pane name="two">
+            野兽咨询
+          </g-tabs-pane>
+          <g-tabs-pane name="there">
+            青春咨询
+          </g-tabs-pane>
+        </g-tabs-body>
+      </g-tabs>
+    </div>
   </div>
+
+
+
 
   <script src="./src/app.js"></script>
 </body>

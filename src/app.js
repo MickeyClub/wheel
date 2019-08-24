@@ -12,6 +12,11 @@ import Footer from './footer'
 import Sider from './sider'
 import Toast from './toast'
 import plugin from './plugin'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsItem from './tabs-item'
+import TabsBody from './tabs-body'
+import TabsPane from './tabs-pane'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -26,6 +31,11 @@ Vue.component('g-footer', Footer)
 Vue.component('g-sider', Sider)
 Vue.component('g-toast', Toast)
 Vue.use(plugin)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-head', TabsHead)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-pane', TabsPane)
 
 new Vue({
   el: '#app',
@@ -33,20 +43,10 @@ new Vue({
     loading: false,
     loading2: true,
     loading3: false,
-    message: 'h1'
+    message: 'h1',
+    selectedTab: 'two'
   },
-  created() {
-    // this.$toast('<strong>十一点半就撤</strong><strong>十一点半就撤</strong><strong>十一点半就撤</strong><strong>十一点半就撤</strong><strong>十一点半就撤</strong>', {
-    //   closeButton: {
-    //     text: '关闭',
-    //     callback(toast) {
-    //       toast.log()
-    //       console.log('我点了 打印知道了')
-    //     }
-    //   },
-    //   enableHtml: true
-    // })
-  },
+  created() {},
   methods: {
     inputChange(e) {
       console.log(e.target.value)
