@@ -44,7 +44,7 @@ new Vue({
     loading2: true,
     loading3: false,
     message: 'h1',
-    selectedTab: 'two'
+    selectedTab: 'one'
   },
   created() {},
   methods: {

@@ -37,7 +37,6 @@ export default {
 <style lang="scss" scoped>
 .pane {
   &.active {
-    background: red;
   }
 }
 </style>

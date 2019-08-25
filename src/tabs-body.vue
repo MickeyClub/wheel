@@ -13,13 +13,13 @@ export default {
   },
   inject: ['eventBus'],
   created() {
-    this.eventBus.$on('update:selected', name => {
-    })
+    this.eventBus.$on('update:selected', name => {})
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .body {
+  padding: 1em;
 }
 </style>

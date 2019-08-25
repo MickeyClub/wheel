@@ -1,4 +1,3 @@
-template
 <template>
   <div class="tabs-head">
     <slot></slot>
@@ -34,12 +33,12 @@ $blue: blue;
   height: $tabs-height;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid red;
   position: relative;
+  border: 1px solid #ddd;
   > .line {
     position: absolute;
     bottom: 0;
-    border-bottom: 3px solid $blue;
+    border-bottom: 2px solid $blue;
     transition: all 350ms;
   }
   > .actions-wrapper {
