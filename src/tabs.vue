@@ -32,7 +32,10 @@ export default {
       }
     }
   },
-  created() {}
+  mounted() {
+    // 选中的tabs
+    this.eventBus.$emit('update:selected', this.selected)
+  }
 }
 </script>
 

@@ -1,6 +1,5 @@
-template
 <template>
-  <div class="pane">
+  <div class="pane" :class="classes" v-if="active">
     <slot></slot>
   </div>
 </template>
@@ -9,12 +8,27 @@ template
 export default {
   name: 'GuluTabsPane',
   data() {
-    return {}
+    return {
+      active: false
+    }
+  },
+  props: {
+    name: {
+      type: String | Number,
+      required: true
+    }
+  },
+  computed: {
+    classes() {
+      return {
+        active: this.active
+      }
+    }
   },
   inject: ['eventBus'],
   created() {
     this.eventBus.$on('update:selected', name => {
-      console.log(name, 123)
+      this.active = name === this.name
     })
   }
 }
@@ -22,5 +36,8 @@ export default {
 
 <style lang="scss" scoped>
 .pane {
+  &.active {
+    background: red;
+  }
 }
 </style>
